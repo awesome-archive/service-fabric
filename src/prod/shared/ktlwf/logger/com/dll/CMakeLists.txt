@@ -30,13 +30,13 @@ set_target_properties(${lib_KPhysicalLog} PROPERTIES
 
 target_link_libraries(${lib_KPhysicalLog}
     ${lib_KComAdapter}
-    ${lib_KtlLoggerShimUPassthrough}
+    ${lib_KtlLoggerShimUnify}
     ${KtlLoggerUser}
     ${Ktlfull}
     ${lib_FabricCommon}
     ${lib_FabricResources}
-  	${lib_Common}
   	${lib_Transport}
+  	${lib_Common}
   	ssh2
   	ssl
   	crypto
@@ -46,11 +46,8 @@ target_link_libraries(${lib_KPhysicalLog}
   	dl
   	xml2
   	uuid
-  	unwind
-  	unwind-x86_64
   	minizip
   	z
-  	bz2
 )
 
 install(TARGETS ${lib_KPhysicalLog} DESTINATION ${TEST_OUTPUT_DIR})

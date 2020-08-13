@@ -15,7 +15,7 @@ add_precompiled_header(${exe_Fabric} ../stdafx.h)
 
 set_target_properties(${exe_Fabric} PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY ${TEST_OUTPUT_DIR}) 
-
+    
 target_link_libraries(${exe_Fabric}
   ${lib_FabricNode}
   ${lib_Communication}
@@ -37,7 +37,7 @@ target_link_libraries(${exe_Fabric}
   ${lib_httpgateway}
   ${lib_httptransport}
   ${lib_ManagementRepairManager}
-  ${lib_KtlLogger}
+  ${lib_KtlLoggerNode}
   ${lib_EntreeService}
   ${lib_StoreService}
   ${lib_Hosting2}
@@ -49,6 +49,7 @@ target_link_libraries(${exe_Fabric}
   ${lib_Replication}
   ${lib_TransactionalReplicator}
   ${lib_Failover}
+  ${lib_NetworkInventoryManager}
   ${lib_LoadBalancing}
   ${lib_FailoverCommon}
   ${lib_SystemServices}
@@ -71,17 +72,15 @@ target_link_libraries(${exe_Fabric}
   ${lib_FabricUUID}
   ${lib_FabricResources}
   ${lib_DnsServiceConfig}
+  ${lib_GatewayResourceManager}
   ${KtlUser}
   ${KtlLoggerUser}
-  ${lib_KtlLoggerShimUPassthrough}
+  ${lib_KtlLoggerShimUnify}
   ${KtlLoggerUser}
   ${Cxx}
   ${CxxABI}
   ssh2
-  snappy
-  lz4
   z
-  bz2
   ssl
   crypto
   minizip
@@ -93,7 +92,5 @@ target_link_libraries(${exe_Fabric}
   dl
   xml2
   uuid
-  unwind
-  unwind-x86_64
 )
 
