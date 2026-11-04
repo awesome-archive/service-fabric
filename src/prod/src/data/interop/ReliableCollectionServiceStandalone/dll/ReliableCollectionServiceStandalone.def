@@ -1,8 +1,0 @@
-LIBRARY ReliableCollectionTestInterop
-EXPORTS
-    FabricGetReliableCollectionApiTable
-    Initialize
-    RequestCheckpointAfterNextTransaction
-    ResetReplica
-    OpenReplica
-    Cleanup
